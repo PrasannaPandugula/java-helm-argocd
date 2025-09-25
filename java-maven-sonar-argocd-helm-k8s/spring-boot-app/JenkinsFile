@@ -48,7 +48,7 @@ pipeline {
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "java-helm-argocd"
-            GIT_USER_NAME = "PrasannaPandugula"
+            GIT_USER_NAME = "Prasanna Pandugula"
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
