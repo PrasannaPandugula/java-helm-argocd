@@ -15,13 +15,13 @@ pipeline {
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
+        sh 'echo hello'
         // build the project and create a JAR file
          sh '''
           cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package
           java -version
           mvn -v
           '''
-          sh 'echo hello'
       }
     }
     stage('Static Code Analysis') {
